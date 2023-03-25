@@ -12,6 +12,11 @@ addons:
       - freeglut3 
       - freeglut3-dev
       - libhamlib-dev
+#  homebrew:
+#    packages:
+#    - beanstalk
+#    cask:
+#    - beanstalk
 script: 
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
     - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install hamlib; fi

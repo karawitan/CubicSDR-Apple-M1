@@ -1,7 +1,7 @@
 # Liquid-DSP
 cd $HOME/build
 
-mkdir jgaeddert/
+mkdir -p jgaeddert/
 cd jgaeddert/
 git clone https://github.com/jgaeddert/liquid-dsp.git
 
@@ -9,8 +9,10 @@ cd liquid-dsp/
 ./bootstrap.sh
 
 echo "Configuring liquid-dsp.."
-./configure > /dev/null
+./configure 
 
 echo "Building liquid-dsp.."
-make -j2 > /dev/null
+make
+
+# will install to /usr/local
 sudo make install

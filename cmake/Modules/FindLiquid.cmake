@@ -12,7 +12,8 @@ endif (LIQUID_INCLUDES)
 
 find_path (LIQUID_INCLUDES liquid/liquid.h)
 
-find_library (LIQUID_LIBRARIES NAMES liquid)
+#find_library (LIQUID_LIBRARIES NAMES liquid)
+find_library (LIQUID_LIBRARIES NAMES LIQUID)
 
 # handle the QUIETLY and REQUIRED arguments and set LIQUID_FOUND to TRUE if
 # all listed variables are TRUE

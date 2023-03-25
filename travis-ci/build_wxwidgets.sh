@@ -11,11 +11,12 @@ echo "Fetch wxWidgets.."
 cd $HOME/build
 mkdir -p $HOME/build/wxWidgets/staticlib
 cd wxWidgets
-wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.1/wxWidgets-3.2.1.tar.bz2 > /dev/null
+wget -nc https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.1/wxWidgets-3.2.1.tar.bz2 > /dev/null
 
 echo "Unpacking wxWidgets.."
 tar -xvjf wxWidgets-3.2.1.tar.bz2 > /dev/null
 cd wxWidgets-3.2.1/
+autoupdate
 ./autogen.sh
 
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then 
@@ -27,6 +28,6 @@ if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
 fi
 
 echo "Building wxWidgets.."
-make -j2
+make 
 make install
 
