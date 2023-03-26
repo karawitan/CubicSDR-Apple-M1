@@ -1,4 +1,8 @@
 # wxWidgets
+uname | egrep -q Darwin && {
+  exec brew install wxwidgets
+}
+
 if [ -f "$HOME/build/wxWidgets/staticlib/bin/wx-config" ]; then
     echo "wxWidgets cache found; skipping.."
     exit 0

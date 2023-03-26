@@ -1,4 +1,9 @@
 # Liquid-DSP
+
+uname | egrep -q Darwin && {
+ exec brew install liquid-dsp
+}
+
 cd $HOME/build
 
 mkdir -p jgaeddert/
